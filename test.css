@@ -25,7 +25,7 @@ header {
     justify-content: center;
     align-items: center;
     color: white;
-    text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+   
     font-size: 3rem;
     font-family: "Germania One", system-ui;
     text-align: center;
@@ -39,7 +39,7 @@ nav {
     align-items: center;
     text-align: center;
     text-decoration: none;
-    gap: 10px;
+    gap: 20px;
 }
 
 #background-video {
@@ -51,6 +51,7 @@ nav {
     top: 0;
     bottom: 0;
     z-index: -1;
+    opacity: .5;
 }
 
 .main-content {
@@ -61,9 +62,10 @@ nav {
     width: 85%;
     height: 200%;
     margin-top: 20px;
-    color: white;
-    background-color: hsl(120, 100%, 15%, 0.2);
+   /* background-color: hsl(120, 100%, 15%, 0.2);*/
+    background-color: hsl(0, 0%, 28%, 0.35);
     /* this is an hsla color.  last # is opacity */
+    
     padding: 5px;
     border-radius: 5px;
     backdrop-filter: blur(5px); /* Apply blur effect to the entire container */
@@ -72,8 +74,8 @@ nav {
 /* this is the styling for the links in the nav bar */
 nav a {
     text-decoration: none;
-    color: white;
-    background-color: hsl(120, 100%, 15%, 0.2);
+    background-color: hsl(0, 0%, 28%, 0.35);
+   /* background-color: hsl(120, 100%, 15%, 0.2); /*
     /* this is an hsla color.  last # is opacity */
     padding: 5px;
     border-radius: 5px;
@@ -81,17 +83,22 @@ nav a {
 
 ul,
 li {
-    color: white;
-    text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+    
+    
     font-size: 3rem;
     font-family: "Germania One", system-ui;
     text-align: center;
     z-index: 1;
 }
 
+ul, li, a, p, h1, h2, h3, h4 {
+    color: #343a40;
+}
+
+
 p {
-    color: white;
-    text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+    
+   
     font-size: 2.5rem;
     font-family: "Germania One", system-ui;
     text-align: center;
@@ -100,15 +107,12 @@ p {
     z-index: 1;
 }
 
-a {
-    font-size: 2.5rem;
-    z-index: 1;
-}
+
 
 h1 {
     font-size: 5rem;
-    color: white;
-    text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+ 
+    
     font-family: "Germania One", system-ui;
     text-align: center;
     z-index: 1;
@@ -117,8 +121,8 @@ h1 {
 
 h2 {
     font-size: 5rem;
-    color: white;
-    text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+    
+   
     font-family: "Germania One", system-ui;
     text-align: center;
     z-index: 1;
@@ -131,9 +135,10 @@ h3:hover,
 a:hover,
 p:hover
 {
-    text-shadow: 0 0 10px rgb(0, 77, 0, .8);
-    transition: all 1.5s ease;
+   text-shadow: 0 0 10px rgb(0, 65, 0, .5);
+    transition: all .75s ease;
     border-radius: 7px;
+
 }
 
 
@@ -144,11 +149,101 @@ section h2 {
 a{
     text-decoration: none;
     font-family: "Germania One", system-ui;
-    color: white;
-    text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+    font-size: 2.5rem;
+    z-index: 1;
 }
 
 
 .i:hover{
     cursor: wait;
 }
+
+::selection {
+  background: #949494;
+}
+
+
+
+@media (max-width: 36rem) {
+    p {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        margin: clamp(0.5rem, 2vw, 1rem) 0; 
+        padding: clamp(0.5rem, 2vw, 1rem); 
+    }
+
+    h1, h2 {
+        font-size: clamp(3rem, 6vw, 4rem); 
+        margin: clamp(1rem, 3vw, 2rem) 0;
+        padding: clamp(0.5rem, 2vw, 1rem); 
+    }
+
+    a {
+        font-size: clamp(1.5rem, 3.5vw, 2rem); 
+        margin: clamp(0.25rem, 1.5vw, 0.5rem) 0; 
+        padding: clamp(0.25rem, 1.5vw, 0.5rem); 
+    }
+}
+
+
+@media (min-width: 36.0625rem) and (max-width: 75rem) {
+    p {
+        font-size: clamp(2rem, 3.5vw, 2.5rem); 
+        margin: clamp(0.5rem, 2vw, 1rem) 0;
+        padding: clamp(0.5rem, 2vw, 1rem); 
+    }
+
+    h1, h2 {
+        font-size: clamp(4rem, 5vw, 5rem); 
+        margin: clamp(1rem, 2.5vw, 1.5rem) 0; 
+        padding: clamp(0.5rem, 2vw, 1rem);
+    }
+
+    a {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        margin: clamp(0.25rem, 1.5vw, 0.5rem) 0; 
+        padding: clamp(0.25rem, 1.5vw, 0.5rem); 
+    }
+}
+
+
+@media (min-width: 75.0625rem) and (max-width: 87.5rem) {
+    p {
+        font-size: clamp(2rem, 3vw, 2.5rem);
+        margin: clamp(0.5rem, 1.5vw, 1rem) 0; 
+        padding: clamp(0.5rem, 1.5vw, 1rem); 
+    }
+
+    h1, h2 
+        font-size: clamp(4rem, 4.5vw, 5rem); 
+        margin: clamp(1rem, 1vw, 1.5rem) 0; 
+        padding: clamp(0.5rem, 1.5vw, 1rem); 
+    }
+
+    a {
+        font-size: clamp(1.5rem, 2.5vw, 2rem); 
+        margin: clamp(0.25rem, 1vw, 0.5rem) 0;
+        padding: clamp(0.25rem, 1vw, 0.5rem);
+    }
+}
+
+@media (max-width: 767px) {
+    p {
+        font-size: clamp(1.6rem, 4vw, 2rem); 
+        margin: 1rem 0; 
+        padding: 1.5rem;
+    }
+
+    h1, h2 {
+        font-size: clamp(3.6rem, 8vw, 4rem);
+        margin: 2rem 0;
+        padding: 1rem; 
+    }
+
+    a {
+        font-size: clamp(1.4rem, 4vw, 1.8rem); 
+        margin: 0.5rem 0;
+        padding: 0.5rem; 
+    }
+}
+
+
